@@ -197,8 +197,8 @@ public abstract class ZRTPSocket {
   // here, where we intentionally do the wrong thing for older devices.  We'll
   // phase this out after a couple of months.
   protected boolean isLegacyConfirmConnection() {
-    RedPhoneClientId clientId = new RedPhoneClientId(getForeignHello().getClientId());
-    return clientId.isLegacyConfirmConnectionVersion();
+    // [Sep 2015] This feature should be long obsolete by now. Disabling now, removing later.
+    return false;
   }
 
   protected void setState(int state) {
